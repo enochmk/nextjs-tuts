@@ -20,11 +20,12 @@ export const options: NextAuthOptions = {
 				const user = {
 					id: '1',
 					name: 'John Smith',
+					username: 'jsmith',
 					email: 'jsmith@email.com',
 					password: 'nextauth',
 				};
 
-				if (credentials?.username === user?.name) {
+				if (credentials?.username === user?.username) {
 					return user;
 				} else {
 					return null;
